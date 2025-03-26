@@ -19,6 +19,10 @@
                     <x-nav-link :href="route('home.contact.index')" :active="request()->routeIs('home.contact.index')">
                         Hubungi Kami
                     </x-nav-link>
+                  
+                    <x-nav-link :href="route('home.produk.index')" :active="request()->routeIs('home.produk.index')">
+                        Produk
+                    </x-nav-link>  
                 </div>
             </div>
 
