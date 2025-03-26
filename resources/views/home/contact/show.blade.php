@@ -1,6 +1,15 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Sparepart Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+{{-- header --}}
+@include('layouts.navigation')
+{{-- @section('content') --}}
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -49,7 +58,7 @@
                 </div>
 
                 <div class="mt-6 flex justify-between">
-                    <a href="{{ route('contact.index') }}" class="inline-flex items-center px-4 py-2 bg-gray-200 border border-transparent rounded-md font-semibold text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                    <a href="{{ route('home.contact.index') }}" class="inline-flex items-center px-4 py-2 bg-gray-200 border border-transparent rounded-md font-semibold text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                         Kembali
                     </a>
                     <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
@@ -64,4 +73,9 @@
         </div>
     </div>
 </div>
-@endsection
+{{-- @endsection --}}
+</body>
+</html>
+
+
+

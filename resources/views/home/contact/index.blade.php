@@ -1,4 +1,15 @@
-{{-- @extends('layouts.admin') --}}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin LCH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+{{-- header --}}
+@include('layouts.navigation')
+    
 
 {{-- @section('content')  --}}
 <div class="py-12">
@@ -36,7 +47,7 @@
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="{{ route('contact.show', $contact->id) }}" class="text-blue-600 hover:text-blue-900 mr-3">Lihat</a>
+                                    <a href="{{ route('home.contact.show', $contact->id) }}" class="text-blue-600 hover:text-blue-900 mr-3">Lihat</a>
                                     <form action="{{ route('contact.destroy', $contact->id) }}" method="POST" class="inline">
                                         @csrf
                                         @method('DELETE')
@@ -57,3 +68,5 @@
     </div>
 </div>
 {{-- @endsection --}}
+</body>
+</html>

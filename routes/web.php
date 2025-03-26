@@ -17,7 +17,7 @@ Route::prefix('hubungi-kami')->group(function () {
 // Routes untuk admin (protected)
 Route::middleware(['auth'])->prefix('admin/contacts')->group(function () {
     Route::get('/', [ContactController::class, 'index'])->name('home.contact.index');
-    Route::get('/{contact}', [ContactController::class, 'show'])->name('contact.show');
+    Route::get('/{contact}', [ContactController::class, 'show'])->name('home.contact.show');
     Route::delete('/{contact}', [ContactController::class, 'destroy'])->name('contact.destroy');
 });
 Route::get('/dashboard', function () {

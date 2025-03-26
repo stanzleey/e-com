@@ -47,7 +47,7 @@ class ContactController extends Controller
             $contact->update(['is_read' => true]);
         }
 
-        return view('contact.show', compact('contact'));
+        return view('home.contact.show', compact('contact'));
     }
 
     // Menghapus pesan
